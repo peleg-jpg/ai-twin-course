@@ -818,6 +818,75 @@ mark.ph{background:#FFE45C;color:#111;padding:0 .2em;border-radius:3px;font-weig
   .proof .ck::after{transform:rotate(45deg) scale(1)}
   .node{border-color:var(--lime)}.node::after{transform:scale(1)}
 }
+
+/* ===== proof from the course (added) ===== */
+/* fix: global .hv{position:absolute} (hero video) was stacking the testimonial cards */
+.s10 figure.pl.hv{position:relative;inset:auto;height:auto;object-fit:initial;background:none;display:block}
+.cproof figure.pl.hv,.s11 figure.lsn-top.pl.hv{position:relative;inset:auto;height:auto;object-fit:initial;background:none;display:block}
+.cproof .pc.pl.hv{width:min(66vw,280px)}
+@media (min-width:700px){.cproof .pc.pl.hv{width:auto}}
+.cproof .cba.pl.hv{width:auto}
+.cproof{background:var(--deep);padding:var(--sec) 0}
+.cproof .h2,.cproof .lead{text-align:center}
+.cproof .lead{margin:18px auto 0;max-width:36ch;text-wrap:balance}
+.prow{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin:46px calc(-1 * var(--gut)) 0;padding:6px var(--gut) 22px;scrollbar-width:none}
+.prow::-webkit-scrollbar{display:none}
+.pc{flex:none;width:min(66vw,280px);scroll-snap-align:start;--plate:var(--lilac);--pr:20px}
+.pc:nth-child(2){--plate:var(--lime)}
+.pc .card{padding:8px;border-radius:20px;background:var(--bg)}
+.pc .who b{font-size:20px}
+.vmedia video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.snd-tag{position:absolute;right:10px;top:10px;font-size:13px;font-weight:700;background:rgba(7,5,28,.72);color:var(--ink);padding:5px 10px;border-radius:999px;pointer-events:none}
+.cba{margin:44px auto 0;max-width:640px;--plate:var(--lime);--pr:20px}
+.cba .card{padding:8px;border-radius:20px;background:var(--bg)}
+.cba .vmedia{aspect-ratio:9/8}
+.cvoice{margin:70px auto 0;max-width:760px;text-align:center}
+.cvoice .h3{margin-bottom:10px}
+.cvoice p{color:var(--dim)}
+.vbtns{display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px}
+.vb{--plate:var(--line-2);--pr:18px}
+.vb:nth-child(2){--plate:var(--lime)}
+.vb .card{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:18px;text-align:right;cursor:pointer;width:100%}
+.vb .pbtn{flex:none;width:52px;height:52px;border-radius:50%;background:var(--lime);display:grid;place-items:center;box-shadow:-3px 3px 0 var(--bg)}
+.vb .pbtn::before{content:"";border-left:15px solid var(--bg);border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.vb.playing .pbtn::before{border:0;width:14px;height:16px;margin:0;background:linear-gradient(90deg,var(--bg) 0 35%,transparent 35% 65%,var(--bg) 65%)}
+.vb b{display:block;font-size:20px;font-weight:700}
+.vb small{display:block;color:var(--dim);font-size:15px}
+.vb .wave{margin-inline-start:auto;display:flex;gap:3px;align-items:center;height:30px}
+.vb .wave i{width:4px;border-radius:2px;background:var(--lilac);height:30%;transition:height .2s}
+.vb.playing .wave i{animation:wv .9s ease-in-out infinite}
+.vb.playing .wave i:nth-child(2n){animation-delay:-.3s}.vb.playing .wave i:nth-child(3n){animation-delay:-.6s}
+@keyframes wv{0%,100%{height:25%}50%{height:100%}}
+.styles{padding:var(--sec) 0}
+.styles .h2,.styles .lead{text-align:center}
+.styles .lead{margin:18px auto 0;max-width:38ch;text-wrap:balance}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.sg{position:relative}
+.sg .ph{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:2px solid var(--line-2);background:var(--surface-2)}
+.sg .ph video{width:100%;height:100%;object-fit:cover;display:block}
+.sg.raw .ph{border-color:var(--dim);filter:saturate(.85)}
+.sg span{display:block;text-align:center;font-weight:700;font-size:16px;margin-top:8px}
+.sg.raw span{color:var(--dim)}
+.sg:not(.raw) span{color:var(--lime)}
+.lsn-top{margin-top:30px;--plate:var(--lime);--pr:20px}
+.lsn-top .card{padding:8px;border-radius:20px;background:var(--bg)}
+.lsn-top .vmedia{aspect-ratio:16/9}
+.lsn-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:22px 0 6px}
+.lsn-meta span{background:var(--surface);border:2px solid var(--line-2);border-radius:999px;padding:6px 14px;font-weight:700;font-size:16px}
+.lsn{display:grid;grid-template-columns:1fr;gap:12px;margin-top:26px}
+.ls{display:flex;align-items:center;gap:14px;background:var(--surface);border:2px solid var(--line-2);border-radius:16px;padding:8px;transition:border-color .3s,transform .3s var(--pop)}
+@media (hover:hover){.ls:hover{border-color:var(--lime);transform:translate(3px,-3px)}}
+.ls img{width:112px;height:auto;aspect-ratio:16/9;border-radius:10px;object-fit:cover;flex:none}
+.ls .lnum{font-size:13px;font-weight:700;color:var(--lime)}
+.ls h3{font-size:17px;font-weight:700;line-height:1.3}
+.ls .d{margin-inline-start:auto;font-size:14px;color:var(--dim);white-space:nowrap;padding-inline-end:6px}
+@media (min-width:700px){
+  .prow{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;overflow:visible;margin:46px 0 0;padding:6px 0 0}
+  .pc{width:auto}.pc:nth-child(2){margin-top:46px}
+  .vbtns{grid-template-columns:1fr 1fr}
+  .sgrid{grid-template-columns:repeat(6,1fr);gap:16px}
+  .lsn{grid-template-columns:1fr 1fr;gap:14px 18px}
+}
 </style>
 </head>
 <body>
@@ -1034,6 +1103,22 @@ mark.ph{background:#FFE45C;color:#111;padding:0 .2em;border-radius:3px;font-weig
   </div>
 </section>
 
+<!-- STYLES (added): same raw video, 5 edits -->
+<section id="styles" class="styles">
+  <div class="wrap">
+    <h2 class="h2"><span class="ln m">סרטון גולמי אחד.</span> <span class="ln m lime">5 עריכות שונות.</span></h2>
+    <p class="lead rv">את אותו סרטון של הכפיל נתנו לקלוד קוד, וביקשנו 5 סגנונות. אף אחד לא פתח תוכנת עריכה.</p>
+    <div class="sgrid">
+      <figure class="sg raw rv"><div class="ph"><video class="loop" muted playsinline loop preload="none" poster="../../assets/course/styles/raw.jpg" data-src="../../assets/course/styles/raw.mp4" aria-label="הסרטון הגולמי, בלי עריכה"></video></div><span>הגולמי</span></figure>
+      <figure class="sg rv"><div class="ph"><video class="loop" muted playsinline loop preload="none" poster="../../assets/course/styles/glass.jpg" data-src="../../assets/course/styles/glass.mp4" aria-label="עריכה בסגנון Glass"></video></div><span>Glass</span></figure>
+      <figure class="sg rv"><div class="ph"><video class="loop" muted playsinline loop preload="none" poster="../../assets/course/styles/vox.jpg" data-src="../../assets/course/styles/vox.mp4" aria-label="עריכה בסגנון Vox"></video></div><span>Vox</span></figure>
+      <figure class="sg rv"><div class="ph"><video class="loop" muted playsinline loop preload="none" poster="../../assets/course/styles/premium.jpg" data-src="../../assets/course/styles/premium.mp4" aria-label="עריכה בסגנון Premium"></video></div><span>Premium</span></figure>
+      <figure class="sg rv"><div class="ph"><video class="loop" muted playsinline loop preload="none" poster="../../assets/course/styles/cinematic.jpg" data-src="../../assets/course/styles/cinematic.mp4" aria-label="עריכה בסגנון Cinematic"></video></div><span>Cinematic</span></figure>
+      <figure class="sg rv"><div class="ph"><video class="loop" muted playsinline loop preload="none" poster="../../assets/course/styles/world.jpg" data-src="../../assets/course/styles/world.mp4" aria-label="עריכה בסגנון World"></video></div><span>World</span></figure>
+    </div>
+  </div>
+</section>
+
 <!-- S8 -->
 <section id="s8" class="s8">
   <div class="wrap s8-grid">
@@ -1106,6 +1191,30 @@ mark.ph{background:#FFE45C;color:#111;padding:0 .2em;border-radius:3px;font-weig
 </section>
 
 <!-- results strip -->
+<!-- PROOF (added): real outputs from the course -->
+<section id="course-proof" class="cproof">
+  <div class="wrap">
+    <h2 class="h2"><span class="ln m">ככה זה נראה</span> <span class="ln m lime">מתוך הקורס עצמו</span></h2>
+    <p class="lead rv">כל סרטון פה יצא בשיעורים, מול המצלמה. תלחץ ותשמע.</p>
+    <div class="prow">
+      <figure class="pc pl hv rv"><div class="card"><div class="vmedia" data-mp4="../../assets/course/proof/reel-dots.mp4" data-title="ריל שנוצר כולו ב-AI"><img src="../../assets/course/proof/reel-dots.jpg" alt="" width="540" height="960" loading="lazy"><span class="snd-tag">🔊 עם סאונד</span><button class="play" type="button" aria-label="ניגון: ריל שנוצר כולו ב-AI"></button></div><figcaption class="who"><b>ריל שנוצר כולו ב-AI</b><span>תסריט, קול, אווטאר ועריכה. אף אחד לא צילם אותו.</span></figcaption></div></figure>
+      <figure class="pc pl hv rv"><div class="card"><div class="vmedia" data-mp4="../../assets/course/proof/reel-nick-style.mp4" data-title="אותה עריכה כמו של יוצר עם 700 אלף עוקבים"><img src="../../assets/course/proof/reel-nick-style.jpg" alt="" width="540" height="960" loading="lazy"><span class="snd-tag">🔊 עם סאונד</span><button class="play" type="button" aria-label="ניגון: עריכה בסגנון של יוצר מצליח"></button></div><figcaption class="who"><b>העתקנו סגנון של יוצר עם 700 אלף עוקבים</b><span>קלוד קוד פירק את העריכה שלו פריים אחרי פריים, ובנה אותה מחדש עם הכפיל.</span></figcaption></div></figure>
+      <figure class="pc pl hv rv"><div class="card"><div class="vmedia" data-mp4="../../assets/course/proof/reel-phone-edit.mp4" data-title="סרטון מהטלפון, ערוך מבקשה אחת"><img src="../../assets/course/proof/reel-phone-edit.jpg" alt="" width="540" height="960" loading="lazy"><span class="snd-tag">🔊 עם סאונד</span><button class="play" type="button" aria-label="ניגון: סרטון מהטלפון שנערך מבקשה אחת"></button></div><figcaption class="who"><b>סרטון רגיל מהטלפון, ערוך מבקשה אחת</b><span>לא רוצה אווטאר? גם בסדר. כתוביות, קאטים וזומים, בלי לגעת בתוכנת עריכה.</span></figcaption></div></figure>
+    </div>
+
+    <figure class="cba pl hv rv"><div class="card"><div class="vmedia" data-mp4="../../assets/course/proof/before-after.mp4" data-title="לפני ואחרי"><img src="../../assets/course/proof/before-after.jpg" alt="" width="720" height="640" loading="lazy"><button class="play" type="button" aria-label="ניגון: לפני ואחרי"></button></div><figcaption class="who"><b>לפני ואחרי</b><span>מימין: מה ש-HeyGen מוציא. משמאל: אותו סרטון אחרי שקלוד קוד ערך אותו.</span></figcaption></div></figure>
+
+    <div class="cvoice">
+      <h3 class="h3 rv">ועכשיו תסגור עיניים.</h3>
+      <p class="rv">אחד מהם זה פלג באמת. השני זה הקול המשוכפל שלו מ-ElevenLabs, אחרי הקלטה של דקה.</p>
+      <div class="vbtns">
+        <div class="vb pl rv"><button class="card" type="button" data-audio="../../assets/course/voice/real.mp3"><span class="pbtn" aria-hidden="true"></span><span><b>ההקלטה האמיתית</b><small>פלג, מול המיקרופון</small></span><span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></button></div>
+        <div class="vb pl rv"><button class="card" type="button" data-audio="../../assets/course/voice/clone.mp3"><span class="pbtn" aria-hidden="true"></span><span><b>הקול המשוכפל</b><small>ElevenLabs, אף מילה לא הוקלטה</small></span><span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="s9r" class="res">
   <div class="wrap">
     <h2 class="h2"><span class="ln m">השיטה</span> <span class="ln m lime">כבר עובדת</span></h2>
@@ -1155,18 +1264,12 @@ mark.ph{background:#FFE45C;color:#111;padding:0 .2em;border-radius:3px;font-weig
 <!-- S11 -->
 <section id="s11" class="s11">
   <div class="wrap">
-    <p class="note rv"><mark class="ph">[[טיוטה: לאמת מול הקורס]]</mark></p>
     <div class="ipanel">
       <div class="ipanel-bg" aria-hidden="true"></div>
       <div class="itab"><h2 class="h2"><span class="ln m">מה יש בפנים</span></h2></div>
-      <ul class="ipills popg">
-        <li class="ip pi spot"><span class="em" aria-hidden="true">🛠️</span><h3>מתקינים את המערכת</h3><p>קלוד קוד, HeyGen <span class="nw">ו-ElevenLabs</span> מחוברים ועובדים ביחד. בלי שורת קוד.</p></li>
-        <li class="ip pi spot"><span class="em" aria-hidden="true">🧠</span><h3>בונים את המוח של הכפיל</h3><p>מלמדים אותו את העסק, הקהל והסגנון שלך, כדי שכל תסריט יישמע כמוך.</p></li>
-        <li class="ip pi spot"><span class="em" aria-hidden="true">🎭</span><h3>בונים את הפנים והקול</h3><p>אווטאר ריאליסטי מתמונות וסרטונים קיימים, וקול משוכפל בעברית.</p></li>
-        <li class="ip pi spot"><span class="em" aria-hidden="true">🎬</span><h3>מפעילים את חדר העריכה</h3><p>עריכה אוטומטית בכמה סגנונות: כתוביות, זומים, B-roll ומושן.</p></li>
-        <li class="ip pi spot"><span class="em" aria-hidden="true">💡</span><h3>מכונת הרעיונות</h3><p>הוקים ותסריטים שבנויים להביא עוקבים ולקוחות.</p></li>
-        <li class="ip pi spot"><span class="em" aria-hidden="true">🗓️</span><h3>שגרת התוכן השבועית</h3><p>איך מוציאים כמה סרטונים בשבוע בשעתיים-שלוש של עבודה.</p></li>
-      </ul>
+      <figure class="lsn-top pl hv rv"><div class="card"><div class="vmedia" data-mp4="../../assets/course/proof/lesson-preview.mp4" data-title="הצצה לשיעורים"><img src="../../assets/course/proof/lesson-preview.jpg" alt="" width="1280" height="720" loading="lazy"><span class="snd-tag">🔊 הצצה של 30 שניות</span><button class="play" type="button" aria-label="ניגון: הצצה לשיעורים"></button></div></div></figure>
+      <div class="lsn-meta rv"><span>14 שיעורים</span><span>77 דקות</span><span>כתוביות בעברית</span><span>זומים על כל מה שקטן במסך</span></div>
+      <ol class="lsn"><li class="ls rv"><img src="../../assets/course/lessons/01.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 1</span><h3>ברוכים הבאים לסוכן כפול</h3></div><span class="d">4:37</span></li><li class="ls rv"><img src="../../assets/course/lessons/02.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 2</span><h3>האנטומיה של ריל שעובד</h3></div><span class="d">2:56</span></li><li class="ls rv"><img src="../../assets/course/lessons/03.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 3</span><h3>המילון: הכלים שנעבוד איתם</h3></div><span class="d">7:29</span></li><li class="ls rv"><img src="../../assets/course/lessons/04.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 4</span><h3>כמה זה עולה באמת</h3></div><span class="d">5:33</span></li><li class="ls rv"><img src="../../assets/course/lessons/05.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 5</span><h3>מתקינים קלוד קוד ומחברים את הכלים</h3></div><span class="d">4:39</span></li><li class="ls rv"><img src="../../assets/course/lessons/06.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 6</span><h3>מוצאים נושא שעוצר את הגלילה</h3></div><span class="d">3:33</span></li><li class="ls rv"><img src="../../assets/course/lessons/07.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 7</span><h3>Apify: מושכים סרטונים ונתונים מהרשת</h3></div><span class="d">6:37</span></li><li class="ls rv"><img src="../../assets/course/lessons/08.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 8</span><h3>כותבים תסריט שמחזיק צופה</h3></div><span class="d">4:24</span></li><li class="ls rv"><img src="../../assets/course/lessons/09.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 9</span><h3>משכפלים את הקול שלך</h3></div><span class="d">9:51</span></li><li class="ls rv"><img src="../../assets/course/lessons/10.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 10</span><h3>יוצרים את האווטאר המדבר</h3></div><span class="d">7:01</span></li><li class="ls rv"><img src="../../assets/course/lessons/11.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 11</span><h3>עורכים בקוד עם Remotion</h3></div><span class="d">9:35</span></li><li class="ls rv"><img src="../../assets/course/lessons/12.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 12</span><h3>משכפלים סגנון של יוצר מצליח</h3></div><span class="d">5:07</span></li><li class="ls rv"><img src="../../assets/course/lessons/13.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 13</span><h3>המכונה המלאה והצעדים הבאים</h3></div><span class="d">3:08</span></li><li class="ls rv"><img src="../../assets/course/lessons/14.webp" alt="" width="640" height="360" loading="lazy"><div><span class="lnum">שיעור 14</span><h3>שאלות ותשובות</h3></div><span class="d">3:06</span></li></ol>
     </div>
     <div class="works">
       <h3 class="h3 rv">וזה עובד גם אם אתה:</h3>
@@ -1522,6 +1625,37 @@ const CONFIG = {
     });
   });
 
+
+  /* added: local mp4 cards play inline with sound on click */
+  $$('.vmedia[data-mp4]').forEach(m => {
+    m.addEventListener('click', () => {
+      if (m.querySelector('video')) return;
+      $$('.vmedia[data-mp4] video').forEach(v => v.pause());
+      document.dispatchEvent(new Event('cvoice:stop'));
+      const v = document.createElement('video');
+      v.src = m.dataset.mp4; v.controls = true; v.playsInline = true; v.autoplay = true;
+      v.setAttribute('aria-label', m.dataset.title || '');
+      m.appendChild(v); v.play().catch(() => {});
+      const b = m.querySelector('.play'); if (b) b.remove();
+      const t = m.querySelector('.snd-tag'); if (t) t.remove();
+    });
+  });
+  /* added: real voice vs cloned voice */
+  (function () {
+    let cur = null;
+    $$('.vb [data-audio]').forEach(btn => {
+      const a = new Audio(btn.dataset.audio); a.preload = 'none';
+      const wrap = btn.closest('.vb');
+      a.addEventListener('ended', () => wrap.classList.remove('playing'));
+      document.addEventListener('cvoice:stop', () => { a.pause(); wrap.classList.remove('playing'); });
+      btn.addEventListener('click', () => {
+        $$('.vmedia video').forEach(v => v.pause());
+        if (cur && cur !== a) { cur.pause(); cur.currentTime = 0; $$('.vb').forEach(x => x.classList.remove('playing')); }
+        if (a.paused) { a.play().catch(() => {}); wrap.classList.add('playing'); cur = a; }
+        else { a.pause(); wrap.classList.remove('playing'); }
+      });
+    });
+  })();
   /* video posters: load Vimeo only on click */
   $$('.vmedia[data-vimeo]').forEach(m => {
     m.addEventListener('click', () => {
