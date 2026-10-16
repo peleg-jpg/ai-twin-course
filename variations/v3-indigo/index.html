@@ -840,6 +840,20 @@ mark.ph{background:#FFE45C;color:#111;padding:0 .2em;border-radius:3px;font-weig
 .cba{margin:44px auto 0;max-width:640px;--plate:var(--lime);--pr:20px}
 .cba .card{padding:8px;border-radius:20px;background:var(--bg)}
 .cba .vmedia{aspect-ratio:9/8}
+.stages{margin:76px auto 0;max-width:980px;text-align:center}
+.stg3{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start;gap:10px;margin-top:28px}
+.st{margin:0}
+.sm{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--surface-2);border:2px solid var(--line-2)}
+.st:last-child .sm{border-color:var(--lime);box-shadow:-6px 6px 0 var(--lilac)}
+.sm img,.sm video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.st figcaption{padding-top:10px}
+.st b{display:flex;align-items:center;justify-content:center;gap:8px;font-size:clamp(15px,.6vw + 13px,20px);font-weight:700}
+.st b i{font-style:normal;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--lime);color:var(--bg);font-size:14px}
+.st span{display:block;color:var(--dim);font-size:clamp(13px,.3vw + 12px,16px);line-height:1.35;margin-top:3px}
+.sarr{align-self:center;margin-top:-40px;width:14px;height:14px;border-left:3px solid var(--lime);border-bottom:3px solid var(--lime);transform:rotate(45deg)}
+.st-go{margin-top:26px}
+@media (min-width:700px){.stg3{gap:22px}.sarr{width:22px;height:22px}}
+
 .cvoice{margin:70px auto 0;max-width:760px;text-align:center}
 .cvoice .h3{margin-bottom:10px}
 .cvoice p{color:var(--dim)}
@@ -1195,14 +1209,24 @@ mark.ph{background:#FFE45C;color:#111;padding:0 .2em;border-radius:3px;font-weig
 <section id="course-proof" class="cproof">
   <div class="wrap">
     <h2 class="h2"><span class="ln m">ככה זה נראה</span> <span class="ln m lime">מתוך הקורס עצמו</span></h2>
-    <p class="lead rv">כל סרטון פה יצא בשיעורים, מול המצלמה. תלחץ ותשמע.</p>
+    <p class="lead rv">כל סרטון פה נבנה עם השיטה שמלמדים בקורס. תלחץ ותשמע.</p>
     <div class="prow">
       <figure class="pc pl hv rv"><div class="card"><div class="vmedia" data-mp4="../../assets/course/proof/reel-dots.mp4" data-title="ריל שנוצר כולו ב-AI"><img src="../../assets/course/proof/reel-dots.jpg" alt="" width="540" height="960" loading="lazy"><span class="snd-tag">🔊 עם סאונד</span><button class="play" type="button" aria-label="ניגון: ריל שנוצר כולו ב-AI"></button></div><figcaption class="who"><b>ריל שנוצר כולו ב-AI</b><span>תסריט, קול, אווטאר ועריכה. אף אחד לא צילם אותו.</span></figcaption></div></figure>
-      <figure class="pc pl hv rv"><div class="card"><div class="vmedia" data-mp4="../../assets/course/proof/reel-nick-style.mp4" data-title="אותה עריכה כמו של יוצר עם 700 אלף עוקבים"><img src="../../assets/course/proof/reel-nick-style.jpg" alt="" width="540" height="960" loading="lazy"><span class="snd-tag">🔊 עם סאונד</span><button class="play" type="button" aria-label="ניגון: עריכה בסגנון של יוצר מצליח"></button></div><figcaption class="who"><b>העתקנו סגנון של יוצר עם 700 אלף עוקבים</b><span>קלוד קוד פירק את העריכה שלו פריים אחרי פריים, ובנה אותה מחדש עם הכפיל.</span></figcaption></div></figure>
-      <figure class="pc pl hv rv"><div class="card"><div class="vmedia" data-mp4="../../assets/course/proof/reel-phone-edit.mp4" data-title="סרטון מהטלפון, ערוך מבקשה אחת"><img src="../../assets/course/proof/reel-phone-edit.jpg" alt="" width="540" height="960" loading="lazy"><span class="snd-tag">🔊 עם סאונד</span><button class="play" type="button" aria-label="ניגון: סרטון מהטלפון שנערך מבקשה אחת"></button></div><figcaption class="who"><b>סרטון רגיל מהטלפון, ערוך מבקשה אחת</b><span>לא רוצה אווטאר? גם בסדר. כתוביות, קאטים וזומים, בלי לגעת בתוכנת עריכה.</span></figcaption></div></figure>
+      <figure class="pc pl hv rv"><div class="card"><div class="vmedia" data-mp4="../../assets/course/proof/reel-agentskills.mp4" data-title="ריל על Agent Skills"><img src="../../assets/course/proof/reel-agentskills.jpg" alt="" width="540" height="960" loading="lazy"><span class="snd-tag">🔊 עם סאונד</span><button class="play" type="button" aria-label="ניגון: ריל על Agent Skills"></button></div><figcaption class="who"><b>ריל מהסדרה האחרונה של פלג</b><span>אותה מכונה שבונים בקורס: נושא, תסריט, כפיל ועריכה, הכל מתוך קלוד קוד.</span></figcaption></div></figure>
+      <figure class="pc pl hv rv"><div class="card"><div class="vmedia" data-mp4="../../assets/course/proof/reel-eilat-ad.mp4" data-title="פרסומת לעיר הנדל״ן באילת"><img src="../../assets/course/proof/reel-eilat-ad.jpg" alt="" width="540" height="960" loading="lazy"><span class="snd-tag">🔊 עם סאונד</span><button class="play" type="button" aria-label="ניגון: פרסומת לעיר הנדל״ן באילת"></button></div><figcaption class="who"><b>פרסומת אמיתית ללקוח, מטייק אחד בטלפון</b><span>צילמנו את עצמנו פעם אחת. קלוד קוד הוסיף לוגואים, כתוביות וזומים, ויצאה פרסומת לעיר הנדל״ן באילת.</span></figcaption></div></figure>
     </div>
 
-    <figure class="cba pl hv rv"><div class="card"><div class="vmedia" data-mp4="../../assets/course/proof/before-after.mp4" data-title="לפני ואחרי"><img src="../../assets/course/proof/before-after.jpg" alt="" width="720" height="640" loading="lazy"><button class="play" type="button" aria-label="ניגון: לפני ואחרי"></button></div><figcaption class="who"><b>לפני ואחרי</b><span>מימין: מה ש-HeyGen מוציא. משמאל: אותו סרטון אחרי שקלוד קוד ערך אותו.</span></figcaption></div></figure>
+    <div class="stages">
+      <h3 class="h3 rv">מתמונה אחת, לריל ערוך</h3>
+      <div class="stg3 rv">
+        <figure class="st"><div class="sm"><img src="../../assets/course/proof/stage-photo.webp" alt="תמונת הסטודיו שממנה נבנה הכפיל" width="540" height="960" loading="lazy"></div><figcaption><b><i>1</i>תמונה אחת</b><span>תמונת סטודיו שנוצרה מסלפי</span></figcaption></figure>
+        <span class="sarr" aria-hidden="true"></span>
+        <figure class="st"><div class="sm"><video class="st-raw" muted playsinline preload="none" poster="../../assets/course/proof/stage-raw.jpg" data-src="../../assets/course/proof/stage-raw.mp4" aria-label="הסרטון הגולמי מ-HeyGen"></video></div><figcaption><b><i>2</i>הכפיל מדבר</b><span>מה ש-HeyGen מוציא, עם הקול המשוכפל</span></figcaption></figure>
+        <span class="sarr" aria-hidden="true"></span>
+        <figure class="st"><div class="sm"><video class="st-edit" playsinline preload="none" poster="../../assets/course/proof/stage-edited.jpg" data-src="../../assets/course/proof/reel-dots.mp4" aria-label="אותו סרטון אחרי העריכה של קלוד קוד"></video><span class="snd-tag">🔊 עם סאונד</span></div><figcaption><b><i>3</i>אחרי העריכה</b><span>קלוד קוד הוסיף כתוביות, זומים ומושן</span></figcaption></figure>
+      </div>
+      <button class="btn st-go rv" type="button"><span class="st-lbl">תראה את שניהם ביחד</span></button>
+    </div>
 
     <div class="cvoice">
       <h3 class="h3 rv">ועכשיו תסגור עיניים.</h3>
@@ -1632,6 +1656,7 @@ const CONFIG = {
       if (m.querySelector('video')) return;
       $$('.vmedia[data-mp4] video').forEach(v => v.pause());
       document.dispatchEvent(new Event('cvoice:stop'));
+      document.dispatchEvent(new Event('stages:stop'));
       const v = document.createElement('video');
       v.src = m.dataset.mp4; v.controls = true; v.playsInline = true; v.autoplay = true;
       v.setAttribute('aria-label', m.dataset.title || '');
@@ -1650,11 +1675,35 @@ const CONFIG = {
       document.addEventListener('cvoice:stop', () => { a.pause(); wrap.classList.remove('playing'); });
       btn.addEventListener('click', () => {
         $$('.vmedia video').forEach(v => v.pause());
+        document.dispatchEvent(new Event('stages:stop'));
         if (cur && cur !== a) { cur.pause(); cur.currentTime = 0; $$('.vb').forEach(x => x.classList.remove('playing')); }
         if (a.paused) { a.play().catch(() => {}); wrap.classList.add('playing'); cur = a; }
         else { a.pause(); wrap.classList.remove('playing'); }
       });
     });
+  })();
+
+  /* added: photo > raw > edited, raw and edited play in sync */
+  (function () {
+    const raw = $('.st-raw'), ed = $('.st-edit'), go = $('.st-go');
+    if (!raw || !ed || !go) return;
+    const lbl = $('.st-lbl', go);
+    const load = v => { if (!v.getAttribute('src')) v.src = v.dataset.src; };
+    const stop = () => { raw.pause(); ed.pause(); lbl.textContent = 'תראה את שניהם ביחד'; };
+    go.addEventListener('click', () => {
+      if (!ed.paused) return stop();
+      load(raw); load(ed);
+      $$('.vmedia video').forEach(v => v.pause());
+      document.dispatchEvent(new Event('cvoice:stop'));
+      if (ed.ended || ed.currentTime > ed.duration - .3) { ed.currentTime = 0; raw.currentTime = 0; }
+      raw.currentTime = ed.currentTime;
+      ed.play().catch(() => {}); raw.play().catch(() => {});
+      lbl.textContent = 'עצור';
+    });
+    ed.addEventListener('timeupdate', () => { if (Math.abs(raw.currentTime - ed.currentTime) > .25 && !raw.paused) raw.currentTime = ed.currentTime; });
+    ed.addEventListener('ended', stop);
+    document.addEventListener('cvoice:stop', () => {});
+    document.addEventListener('stages:stop', stop);
   })();
   /* video posters: load Vimeo only on click */
   $$('.vmedia[data-vimeo]').forEach(m => {
