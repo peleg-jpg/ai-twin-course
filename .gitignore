@@ -1,0 +1,43 @@
+# raw uploads (originals stay local)
+/*.MP4
+/*.mp4
+/*.png
+/*.jpg
+
+# local only
+/research/
+/.playwright-mcp/
+.DS_Store
+__pycache__/
+
+# only v3 for now
+/variations/v1-noir/
+/variations/v2-champagne/
+/variations/v4-mirror/
+/variations/v5-emerald/
+/variations/index.html
+/variations/*/qa/
+
+# asset notes contain third-party personal details
+/assets/INVENTORY.md
+
+# assets: keep only what the page uses
+/assets/lottie/*
+!/assets/lottie/v3-indigo/
+/assets/people/*
+!/assets/people/ig-*.webp
+!/assets/people/shon-cutout.png
+!/assets/people/peleg-cutout.png
+!/assets/people/shon-cutout-head-shoulders-web.webp
+/assets/testimonials/*
+!/assets/testimonials/video-posters/
+!/assets/testimonials/course-wa-hamlatsa-2-web.jpg
+!/assets/testimonials/course-review-bikoret-4-web.jpg
+/assets/testimonials/video-posters/workshop-hero-*
+
+# internal docs stay local (repo is public)
+/brief.md
+/tasks/
+/copy/
+/variations/BUILD-SPEC.md
+/variations/DESIGN-DIRECTIONS.md
